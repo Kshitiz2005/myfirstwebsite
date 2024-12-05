@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOOORNYYYYY ME</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    nav.shrink {
+      padding: 0.5rem 2rem;
+      background: #333;
+    }
+    .logo {
+      width: 100px; /
+    }
+    .menu {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+    }
+    .menu li {
+      cursor: pointer;
+    }
+    .menu li:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #fff;
+      border-radius: 20px;
+      padding: 0.3rem 0.8rem;
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 20px;
+    }
+    .search-bar input::placeholder {
+      color: #888;
+    }
+    .search-bar button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #555;
+    }
+    .slideshow-container {
+      max-width: 600px; 
+      margin: 20px auto; 
+      position: relative;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f9f9f9;
+    }
+    .slides {
+      display: none;
+    }
+    .slides img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      border-radius: 10px;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 10px;
+      margin-top: -20px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    .dot-container {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .dot.active {
+      background-color: #717171;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="logo">
+        <img src="http://www.mmmut.ac.in/images/logo3.jpg" alt="mmmut logo">
+     
+    </div>
+    <ul class="menu">
+        <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Contact</li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>&#128269;</button>
+    </div>
+  </nav>
+
+  <div class="slideshow-container">
+    <!-- Add your college images here -->
+    <div class="slides">
+      <img src=".vscode/mmm.jpg" alt="College Image 1">
+    </div>
+    <div class="slides">
+      <img src=".vscode/img2.jpg" alt="College Image 2">
+    </div>
+    <div class="slides">
+      <img src=".vscode/img3.jpg" alt="College Image 3">
+    </div>
+    <div class="slides">
+        <img src=".vscode/img4.jpg" alt="mmmut images">
+    </div>
+    <div class="slides">
+        <img src=".vscode/img5.jpg" alt="mmmut images">
+    </div>
+    <div class="slides">
+        <img src=".vscode/img6.jpeg" alt="mmmut images">
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Resources</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .menu {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+    .menu li {
+      cursor: pointer;
+    }
+    .menu li:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s;
+    }
+    .content-section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .content-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .resources {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .resource {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .resource:hover {
+      transform: scale(1.05);
+    }
+    .resource h3 {
+      margin: 0;
+      color: #444;
+    }
+    .resource p {
+      margin: 10px 0 0;
+      color: #666;
+    }
+    .resource a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #ff6ec4;
+      font-weight: bold;
+    }
+    .resource a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-section" id="Services">
+    <h2>College Resources</h2>
+    <div class="resources">
+      <!-- PYQs -->
+      <div class="resource">
+        <h3>Previous Year Question Papers</h3>
+        <p>Access previous year question papers for various subjects and courses to help you prepare better.</p>
+        <a href="https://drive.google.com/drive/u/0/folders/13sHtYO5VwSVbn-pnuAS6FGQ0W5FPxoVt" target="_blank">View PYQs</a>
+      </div>
+      <!-- Notes -->
+      <div class="resource">
+        <h3>Lecture Notes</h3>
+        <p>Download comprehensive notes curated by professors and toppers to excel in your studies.</p>
+        <a href="https://www.mmmut.xyz/notes/note.html?branch=2" target="_blank">Download Notes</a>
+      </div>
+      <!-- Syllabus -->
+      <div class="resource">
+        <h3>Syllabus</h3>
+        <p>Stay updated with the latest syllabus for your courses and ensure you cover all important topics.</p>
+        <a href="syllabus.html" target="_blank">View Syllabus</a>
+      </div>
+      <!-- Study Material -->
+      <div class="resource">
+        <h3>Additional Study Materials</h3>
+        <p>Access curated study materials, books, and references to enhance your learning experience.</p>
+        <a href="study-material.html" target="_blank">View Study Materials</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+</html>
